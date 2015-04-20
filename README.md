@@ -8,7 +8,7 @@ Bike tours around the five boroughs.
 
 The page is a responsive scroll. 
 
-The landingpage (Home) will display a repeating gif images. 
+The landingpage (Home) will display a repeating gif image. 
 
 User scrolls and sees 3 tour options.
 
