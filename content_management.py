@@ -1,4 +1,6 @@
 def content():
-    TOPIC_dICT = {"Basics": [["Pineapple","/"],
+    TOPIC_DICT = {"Basics": [["Pineapple","/"],
     ["Tours","/tours"],
     ["Essentials fo the Ride","/essentials"]]}
+
+    return TOPIC_DICT

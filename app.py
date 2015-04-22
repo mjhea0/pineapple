@@ -1,6 +1,11 @@
 # import the Flask class from the flask module
 from flask import Flask, render_template
 
+from content_management import content
+
+TOPIC_DICT = content()
+
+
 # create the application object
 app = Flask(__name__)
 
@@ -16,7 +21,7 @@ def home():
 
 @app.route('/about')
 def welcome():
-    return render_template('about.html')  # render a template
+    return render_template('about.html', TOPIC_DICT=TOPIC_DICT)  # render a template
 
 @app.route('/about/contact')
 def contact():

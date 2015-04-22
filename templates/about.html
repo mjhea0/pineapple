@@ -5,6 +5,16 @@
 <br>
 <h3>NYC Bike Tours</h3>
 <br>
+
+
+<ul>
+    {% for t in TOPIC_DICT["Basics"] %}
+    <li><a href="{{t[1]}}">{{t[0]}}</a></li>
+    {% endfor %}
+
+</ul>
+
+<br>
 <p>Click <a href="/">here</a> to return home.</p>
 
 
