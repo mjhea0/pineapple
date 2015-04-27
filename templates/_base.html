@@ -3,7 +3,7 @@
   <head>
     <title>Pineapple</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet" media="screen">
   </head>
   <body>
 
@@ -26,7 +26,7 @@
           <ul class="nav navbar-nav">
             <li><a href="/about">About</a></li>
             <li><a href="/tours">Tours</a></li>
-            <li><a href="/essentials">Essentials</a></li> 
+            <li><a href="/essentials">Essentials</a></li>
           </ul>
 
         </div><!-- /.navbar-collapse -->
@@ -36,9 +36,11 @@
     <div class="container">
       {% block content %}{% endblock %}
     </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type ="text/javascript" src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+
   </body>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script type = "text/javascript" src = "/static/bootstrap.min.js"></script>
 
 </html>
 

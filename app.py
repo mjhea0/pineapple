@@ -9,27 +9,29 @@ TOPIC_DICT = content()
 # create the application object
 app = Flask(__name__)
 
+
 # use decorators to link the function to a url
 @app.route('/')
 def home():
-
     title = "Pineapple"
     paragraph = "NYC City Bike tour. Discovering NYC by bike."
+    return render_template('index.html', title=title, paragraph=paragraph)
 
-
-    return render_template('index.html', title=title, paragraph=paragraph) # return a string
 
 @app.route('/about')
 def welcome():
-    return render_template('about.html', TOPIC_DICT=TOPIC_DICT)  # render a template
+    return render_template('about.html', TOPIC_DICT=TOPIC_DICT)
+
 
 @app.route('/about/contact')
 def contact():
     return render_template('contact.html')
 
+
 @app.route('/tours')
 def book():
     return render_template('tours.html')
+
 
 @app.route('/essentials')
 def essentials():

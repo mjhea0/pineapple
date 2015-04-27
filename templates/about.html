@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "_base.html" %}
 {% block content %}
 
 <h1>Pineapple</h1>
@@ -6,16 +6,13 @@
 <h3>NYC Bike Tours</h3>
 <br>
 
-
 <ul>
-    {% for t in TOPIC_DICT["Basics"] %}
+  {% for t in TOPIC_DICT["Basics"] %}
     <li><a href="{{t[1]}}">{{t[0]}}</a></li>
-    {% endfor %}
-
+  {% endfor %}
 </ul>
 
 <br>
 <p>Click <a href="/">here</a> to return home.</p>
-
 
 {% endblock %}
